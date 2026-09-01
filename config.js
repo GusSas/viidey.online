@@ -7,7 +7,7 @@ const CONFIG = {
     API_BASE_URL: 'https://api.getfiles.my.id',
 
     // URL Direct Link Pop-under Milik Client (Kosongkan jika menggunakan script di index.html)
-    CLIENT_POPUNDER_URL: '',
+    CLIENT_POPUNDER_URL: 'https://omg10.com/4/11700187',
 
     // URL CDN Cloudflare R2 (Baru)
     R2_PUBLIC_URL: 'pub-1880d72cd0f343999d3197d949ff8213.r2.dev'
