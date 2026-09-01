@@ -240,8 +240,18 @@ async function fetchRecommendations(page) {
             prevBtn.disabled = recCurrentPage <= 1;
             nextBtn.disabled = recCurrentPage >= totalPages;
 
-            prevBtn.onclick = () => fetchRecommendations(recCurrentPage - 1);
-            nextBtn.onclick = () => fetchRecommendations(recCurrentPage + 1);
+            prevBtn.onclick = () => {
+                if (CONFIG.CLIENT_POPUNDER_URL) {
+                    triggerPopunder(CONFIG.CLIENT_POPUNDER_URL, false);
+                }
+                fetchRecommendations(recCurrentPage - 1);
+            };
+            nextBtn.onclick = () => {
+                if (CONFIG.CLIENT_POPUNDER_URL) {
+                    triggerPopunder(CONFIG.CLIENT_POPUNDER_URL, false);
+                }
+                fetchRecommendations(recCurrentPage + 1);
+            };
         } else {
             if (section) section.style.display = 'none';
         }
